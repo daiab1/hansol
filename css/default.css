@@ -1,0 +1,45 @@
+@charset "utf-8";
+    
+body{
+    min-width: 1200px;
+    color: #333;
+}
+.gnb li a{
+    font-family: 'NanumGothic';
+    font-weight: 700;
+}
+body,h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    font-family: 'NotoSans';
+}    
+.con02List p span{
+    font-family: 'NotoSans';
+    font-weight: 200;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'NanumGothic';
+    font-weight: 900;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+    
+a{
+    text-decoration:none;
+    color:#333;
+}
+
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.cf::after{
+    content: "";
+    display: block;
+    clear: both;
+}

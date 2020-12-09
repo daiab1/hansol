@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+/*웹뷰안보임*/
+
+.panel,.mCon03Menu04,.mMain04{display: none;}
+
+
+/*모바일뷰*/ 
+@media screen and (max-width:768px){ /*스페이스바 유의*/
+    /*body{display: none};  체킹용*/
+    
+    /*리셋*/
+    body{min-width: auto;}
+    .inner{width: auto;}
+    
+    /*안보임처리*/
+    .gnb,.util,.con03Menu04,.mainCon03>div:hover p,.mainCon04,.mainCon02,.fInfo,.fLogo {display: none;}
+    
+    /*보임처리*/
+    .mCon03Menu04,.mMain04{display: block;}
+    .panel{
+        display:block;
+        width: 16px;
+        height: 15px;
+        background: url(../images/sp_com.png)no-repeat -227px -98px;
+        background-size: 400px;
+        position: absolute;
+        right: 0;
+        top: 7px; /*28px고정값 계산함*/
+        text-indent: -9999px;
+    }
+    .panel a{
+        display: block;
+        height: 100%; 
+    }
+    /*헤더*/
+    #header{
+        height: auto; /*높이값 자동으로만듬->하면position absolte되어있어서 영역안잡힘*/
+        margin: 10px 20px;/*마진줄여줌*/
+    }
+    #header h1{
+        width: 70px;
+        height: 28px;
+        background-size: 400px; /* 모바일 사이즈줄임*/
+        background-position: 0 0;
+        position: static;/* 띄어진건 기본값으로만듬*/
+    }
+    /*메인슬라이더*/
+    .mainSlider{
+        margin: 0;
+        height: auto;
+        padding: 45% 0; /*높이주는법*/
+        background-size: cover;
+    }
+    
+    
+    .silderTxt{
+        padding-top: 0; /*웹뷰에서 텍스트패딩값 빼준다*/
+        font-size: 11px; /*p*/
+    }
+    
+    .silderTxt h2{
+        font-size: 14px;
+    }
+    
+    .sliderBtn{
+        width: 13px;
+        height: 23px;
+        background-size: 400px;
+        background-position: -64px -30px;
+    }
+    .prevBtn{left: 10px;}
+    .nextBtn{
+        background-position: -79px -30px;
+        right: 10px; /*웹뷰에서right줬으면right,left면 left*/
+    }
+    
+    /*메인컨텐츠01*/
+    .mainCon01{padding: 20px 0;}
+    .mainCon01 ul{
+        display: block;/*3등분만들기위해/ (웹뷰에선 inline-block으로설정해놨었음)*/
+    }
+    .mainCon01 li {
+        width: 33.33%;
+        margin:10px 0px; /*(웹뷰기본값이margin 0 30px)*/
+    } 
+    .mainCon01 li span{
+        width: 33px;
+        height: 33px;
+        background-size: 400px;
+        margin: 0 auto; /*이미지만가운데정렬*/
+        margin-bottom: 5px;
+        
+    }
+    
+    /*모바일에서 호버 못없애니깐 원래값으로만듬*/
+    .mainCon01 li:hover span{
+        background-position-y:-57px;
+    }
+    .mainCon01 li:hover .con01Icon03{
+        background-position-y:-55px;
+    }
+    .mainCon01 li:hover p{
+        color: #333;
+    }
+    
+
+    .con01Icon01{background-position:-1px -57px;}
+    .con01Icon02{background-position:-37px -57px;}
+    .con01Icon03{background-position:-74px -55px;}
+    .con01Icon04{background-position:-109px -57px;}
+    .con01Icon05{background-position:-145px -57px;}
+    .con01Icon06{background-position:-181px -57px;}
+    
+    
+     
+    /*mainCon03*/
+    .mainCon03{
+        /*padding-top: 0;*/
+        padding:0 10px; /*부모에게width,height없기때문에 border-box줄필요없고,영향도없다 */
+     
+    }
+    
+    
+    .mainCon03>div{
+        /*width: 50%;*/
+        width: calc(50% - 5px);
+        height: auto; /*일단은 고정값아닌 auto으로만들어준다. */
+       /* margin-right: 0;
+        *//*웹뷰에마진적용되서 0안해주면 떨어져보인다*/
+        margin-right:10px;
+        margin-bottom: 10px;
+    }
+    .mainCon03 .con03Menu02{margin-right: 0;}
+    
+    .mainCon03>div h3,.mainCon03 .con03Menu04 h3{
+        /*padding-top: 0;*/
+        padding: 45% 0; /*늘어나도 직사각형아닌 정사각형으로 늘어나*/
+        font-size: 15px;
+    }
+    
+    
+    /*MainCon04*/
+    .mMain04{
+        padding: 0 10px; /**/
+    }
+    .mMain04 li{
+        background:#f2f0ed;
+        height: 45px;
+        line-height: 45px;  /*padding값으로 중앙정렬해줘도됨*/
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+    .mMain04 li h4{
+       width: 15%;
+       display: inline-block; /*제목 + p붙여서정렬하기위해*/
+       vertical-align: top; /*라인헤이트주면*/
+       color: #2d5b79;
+       text-align: center;/*가로 15%기준으로 중간정렬*/
+       
+    }
+    .mMain04 li a{
+        width: 70%;
+        display: inline-block; /*제목 + p붙여서정렬하기위해*/
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        padding-left: 5%;
+        vertical-align: top;
+ 
+    }
+    
+    .mMain04 li p{}
+    
+    
+    /*mainCon05*/
+    .mainCon05{
+        margin-top: 0; /*기존에 마진50잡혀있었다 + 마진상쇄개념*/
+        padding: 20px 10px;
+        padding-bottom: 10px; /*li 더해진마진10 (20에서)10 빼줌*/
+    }
+    
+    .con05Menu li{
+        /*width: 50%;*/
+        width:calc(50% - 5px);
+        margin-right: 10px;
+        margin-bottom: 10px; /*각각li밑에마진10+*/
+    }
+    .con05Menu li:nth-child(2n){
+        margin-right: 0;
+    }
+    .con05Txt{
+        font-size: 0;
+    }
+    .con05Txt h2{
+        font-size: 15px;
+    }
+    
+    
+    /*footer*/
+    .fTop{
+        height: auto;
+        line-height: 30px; /*웹뷰40e되어있어서*/
+         text-align: center;
+    }
+    .fMenu{
+        width: 250px; /*고정값을준다*/
+       
+        float: none; /*중간정렬하기위해서 기존에 설정된 float해제해준다->margin생김*/
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .fMenu li{
+        float: none; /*float, inline-block 둘다쓸수는있지만float가 더 강력해서 float만먹힘. 그래서 여기서 float원래상태로해줌 */
+        display: inline-block;
+    }
+    
+    .fMenu li:nth-child(3)::after{
+        display: none;
+    }
+    /*만약html ul 2개만들었으면 css에서는 width:100%해주면된다*/
+    
+    .csFamily{
+        line-height: 40px;
+        font-size: 13px;
+        float: none;  /*가로로 붙이기위해서 웹뷰적용된float해제*/
+        display: inline-block; 
+        
+    }
+
+    
+    .csBox .csNum{
+        font-size: 13px; 
+    }
+    
+    
+    .csFamily .familySite{
+        width:auto;
+        padding-right: 40px;
+    }
+    
+    .familySite a{
+        
+    }
+
+    .fBottom{
+        padding:30px 0 ;
+    }
+    
+}   
+
+
